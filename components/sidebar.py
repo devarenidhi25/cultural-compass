@@ -5,24 +5,24 @@ def show_sidebar(data):
     """Display the sidebar with filters and other content"""
     st.markdown("<h3>Explore India</h3>", unsafe_allow_html=True)
     
-    # State filter
-    all_states = sorted(list(set(data["heritage_sites"]['state']).union(set(data["cultural_events"]['state']))))
-    selected_states = st.multiselect("Select States", all_states, default=[])
+    # # State filter
+    # all_states = sorted(list(set(data["heritage_sites"]['state']).union(set(data["cultural_events"]['state']))))
+    # selected_states = st.multiselect("Select States", all_states, default=[])
     
-    # Season/Month filter
-    months = ['January', 'February', 'March', 'April', 'May', 'June', 
-             'July', 'August', 'September', 'October', 'November', 'December']
-    selected_months = st.multiselect("Select Months", months, default=[])
+    # # Season/Month filter
+    # months = ['January', 'February', 'March', 'April', 'May', 'June', 
+    #          'July', 'August', 'September', 'October', 'November', 'December']
+    # selected_months = st.multiselect("Select Months", months, default=[])
     
-    # Art form filter
-    art_types = sorted(list(set(data["art_forms"]['type'])))
-    selected_art_types = st.multiselect("Select Art Forms", art_types, default=[])
+    # # Art form filter
+    # art_types = sorted(list(set(data["art_forms"]['type'])))
+    # selected_art_types = st.multiselect("Select Art Forms", art_types, default=[])
     
-    # Category filter
-    categories = sorted(list(set(data["heritage_sites"]['category'])))
-    selected_categories = st.multiselect("Select Categories", categories, default=[])
+    # # Category filter
+    # categories = sorted(list(set(data["heritage_sites"]['category'])))
+    # selected_categories = st.multiselect("Select Categories", categories, default=[])
     
-    st.markdown("<hr>", unsafe_allow_html=True)
+    # st.markdown("<hr>", unsafe_allow_html=True)
     
     # Quick links
     st.markdown("<h4>Quick Links</h4>", unsafe_allow_html=True)
@@ -52,9 +52,9 @@ def show_sidebar(data):
     </div>
     """, unsafe_allow_html=True)
     
-    return {
-        "selected_states": selected_states,
-        "selected_months": selected_months,
-        "selected_art_types": selected_art_types,
-        "selected_categories": selected_categories
-    }
+    # return {
+    #     "selected_states": selected_states,
+    #     "selected_months": selected_months,
+    #     "selected_art_types": selected_art_types,
+    #     "selected_categories": selected_categories
+    # }

@@ -36,6 +36,10 @@ def load_css():
         --border-color: rgba(255,255,255,0.1);
         --hover-bg: rgba(255,255,255,0.05);
     }
+    .dark-mode body, .dark-mode .stApp {
+        background-color: #121212 !important;
+        color: #E0E0E0 !important;
+    }
 
     /* Base styling */
     .main {
