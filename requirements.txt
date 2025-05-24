@@ -1,11 +1,7 @@
-# Core Libraries
 streamlit
 pandas
-
-# Snowflake Connector (if using Snowflake for dynamic data)
+folium
 snowflake-connector-python
-
-# Optional – Add these if used in components/pages (common in dashboards)
 numpy
 plotly
 matplotlib
