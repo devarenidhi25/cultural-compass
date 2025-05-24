@@ -24,17 +24,17 @@ def show_sidebar(data):
     
     # st.markdown("<hr>", unsafe_allow_html=True)
     
-    # Quick links
-    st.markdown("<h4>Quick Links</h4>", unsafe_allow_html=True)
-    st.markdown("""
-    <ul style="list-style-type: none; padding-left: 0;">
-        <li>🏛️ <a href="#" style="text-decoration: none;">UNESCO Heritage Sites</a></li>
-        <li>🎭 <a href="#" style="text-decoration: none;">Major Festivals</a></li>
-        <li>🏞️ <a href="#" style="text-decoration: none;">Natural Wonders</a></li>
-        <li>🧠 <a href="#" style="text-decoration: none;">Cultural Insights</a></li>
-        <li>🛍️ <a href="#" style="text-decoration: none;">Handicraft Traditions</a></li>
-    </ul>
-    """, unsafe_allow_html=True)
+    # # Quick links
+    # st.markdown("<h4>Quick Links</h4>", unsafe_allow_html=True)
+    # st.markdown("""
+    # <ul style="list-style-type: none; padding-left: 0;">
+    #     <li>🏛️ <a href="#" style="text-decoration: none;">UNESCO Heritage Sites</a></li>
+    #     <li>🎭 <a href="#" style="text-decoration: none;">Major Festivals</a></li>
+    #     <li>🏞️ <a href="#" style="text-decoration: none;">Natural Wonders</a></li>
+    #     <li>🧠 <a href="#" style="text-decoration: none;">Cultural Insights</a></li>
+    #     <li>🛍️ <a href="#" style="text-decoration: none;">Handicraft Traditions</a></li>
+    # </ul>
+    # """, unsafe_allow_html=True)
     
     # Testimonial
     random_testimonial = data["testimonials"].sample(1).iloc[0]

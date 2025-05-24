@@ -148,6 +148,7 @@ def load_heritage_sites():
     }
     return pd.DataFrame(data)
 
+
 @st.cache_data
 def load_cultural_events():
     # Sample data for cultural events
@@ -157,28 +158,48 @@ def load_cultural_events():
             'Ziro Music Festival', 'Kumbh Mela', 'Rann Utsav', 'Konark Dance Festival', 'Pongal',
             'Jaisalmer Desert Festival', 'Khajuraho Dance Festival', 'Holi in Mathura', 'Thrissur Pooram',
             'Losar Festival', 'Ganesh Chaturthi in Mumbai', 'Durga Puja in Kolkata', 'Diwali in Varanasi',
-            'Hampi Utsav', 'Sangai Festival'
+            'Hampi Utsav', 'Sangai Festival',
+            'Mysuru Dasara', 'Lathmar Holi Barsana', 'Teej Festival', 'Nagaur Fair', 'Chapchar Kut',
+            'Chithirai Festival', 'Surajkund Mela', 'Desi Mahotsav', 'Bhakti Festival', 'Rath Yatra',
+            # New 10 events
+            'Bastar Dussehra', 'Karni Mata Festival', 'Meenakshi Tirukalyanam', 'Thrissur Pooram', 'Vibrant Gujarat',
+            'Magh Bihu', 'Phool Dei Festival', 'Chapchar Kut', 'Gangaur Festival', 'Tarnetar Fair'
         ],
         'state': [
             'Nagaland', 'Rajasthan', 'Ladakh', 'Kerala', 'Assam',
             'Arunachal Pradesh', 'Uttar Pradesh', 'Gujarat', 'Odisha', 'Tamil Nadu',
             'Rajasthan', 'Madhya Pradesh', 'Uttar Pradesh', 'Kerala',
             'Sikkim', 'Maharashtra', 'West Bengal', 'Uttar Pradesh',
-            'Karnataka', 'Manipur'
+            'Karnataka', 'Manipur',
+            'Karnataka', 'Uttar Pradesh', 'Rajasthan', 'Rajasthan', 'Mizoram',
+            'Tamil Nadu', 'Haryana', 'Delhi', 'Maharashtra', 'Odisha',
+            # Added states
+            'Chhattisgarh', 'Rajasthan', 'Tamil Nadu', 'Kerala', 'Gujarat',
+            'Assam', 'Uttarakhand', 'Mizoram', 'Rajasthan', 'Gujarat'
         ],
         'month': [
             'December', 'November', 'July', 'August', 'April',
             'September', 'January', 'December', 'December', 'January',
             'February', 'February', 'March', 'April',
             'February', 'September', 'October', 'November',
-            'November', 'November'
+            'November', 'November',
+            'October', 'March', 'August', 'January', 'March',
+            'April', 'February', 'November', 'November', 'July',
+            # Added months
+            'October', 'March', 'April', 'April', 'January',
+            'January', 'March', 'March', 'March', 'August'
         ],
         'date': [
             '2023-12-01', '2023-11-15', '2023-07-10', '2023-08-20', '2023-04-14',
             '2023-09-22', '2024-01-15', '2023-12-10', '2023-12-01', '2024-01-14',
             '2024-02-05', '2024-02-20', '2024-03-25', '2024-04-15',
             '2024-02-10', '2023-09-19', '2023-10-20', '2023-11-12',
-            '2023-11-03', '2023-11-21'
+            '2023-11-03', '2023-11-21',
+            '2023-10-05', '2024-03-17', '2023-08-01', '2024-01-10', '2024-03-15',
+            '2024-04-10', '2024-02-15', '2023-11-25', '2023-11-10', '2023-07-10',
+            # Added dates
+            '2023-10-12', '2024-03-21', '2024-04-15', '2024-04-15', '2024-01-15',
+            '2024-01-14', '2024-03-05', '2024-03-18', '2024-03-22', '2024-08-10'
         ],
         'description': [
             'Celebrates the heritage of Naga tribes with music, dance, and traditional games.',
@@ -200,21 +221,52 @@ def load_cultural_events():
             'Bengal\'s grand festival with artistic pandals, cultural performances, and community feasts.',
             'Experience the Festival of Lights along the sacred ghats of Varanasi with thousands of lamps.',
             'Cultural extravaganza celebrating the glory of the Vijayanagara Empire with music and dance.',
-            'Manipur\'s largest festival showcasing the state\'s rich cultural heritage and biodiversity.'
+            'Manipur\'s largest festival showcasing the state\'s rich cultural heritage and biodiversity.',
+            'Royal celebration of the victory of good over evil with processions and cultural events.',
+            'Traditional Holi celebrations with women playfully hitting men with sticks.',
+            'Festival celebrating the monsoon with prayers for marital bliss and prosperity.',
+            'One of the largest cattle fairs showcasing livestock trading and folk events.',
+            'Spring festival marking the end of winter with traditional dances and feasts.',
+            'Celebrates the coronation of Goddess Meenakshi with processions and rituals.',
+            'Annual crafts fair displaying regional handicrafts, handlooms, and folk art.',
+            'Cultural festival promoting folk music, dance, and regional cuisine.',
+            'Devotional music festival featuring Bhakti and Sufi performances.',
+            'Massive chariot procession of Lord Jagannath, a grand religious spectacle.',
+            # New descriptions
+            'A unique Dussehra celebration featuring local tribal rituals and cultural performances in Bastar.',
+            'Festival honoring the Karni Mata goddess with rat worship and grand rituals.',
+            'Grand temple wedding reenactment of Goddess Meenakshi and Lord Sundareswarar.',
+            'Famous temple festival known for its elephant processions and vibrant percussion ensembles.',
+            'Large-scale business and cultural event promoting investment and Gujarat\'s heritage.',
+            'Traditional Assamese harvest festival celebrated with feasts and community bonfires.',
+            'Uttarakhand’s spring festival with traditional dances, songs, and the welcoming of the harvest.',
+            'Mizoram’s traditional festival celebrating the end of winter with folk music and dance.',
+            'Rajasthan’s festival dedicated to Gauri (Parvati) involving folk dances and rituals for marital happiness.',
+            'Folk festival with traditional wrestling, cultural shows, and a pilgrimage fair in Gujarat.'
         ],
         'image_url': [
             'hornbill.jpg', 'pushkar.jpg', 'hemis.jpg', 'onam.jpg', 'bihu.jpg',
             'ziro.jpg', 'kumbh.jpg', 'rann.jpg', 'konark.jpg', 'pongal.jpg',
             'jaisalmer.jpg', 'khajuraho_dance.jpg', 'holi.jpg', 'thrissur.jpg',
             'losar.jpg', 'ganesh.jpg', 'durga.jpg', 'diwali.jpg',
-            'hampi_utsav.jpg', 'sangai.jpg'
+            'hampi_utsav.jpg', 'sangai.jpg',
+            'mysuru_dasara.jpg', 'lathmar_holi.jpg', 'teej.jpg', 'nagaur_fair.jpg', 'chapchar_kut.jpg',
+            'chithirai.jpg', 'surajkund.jpg', 'desi_mahotsav.jpg', 'bhakti_festival.jpg', 'rath_yatra.jpg',
+            # New images
+            'bastar_dussehra.jpg', 'karni_mata.jpg', 'meenakshi_tirukalyanam.jpg', 'thrissur_pooram2.jpg', 'vibrant_gujarat.jpg',
+            'magh_bihu.jpg', 'phool_dei.jpg', 'chapchar_kut2.jpg', 'gangaur.jpg', 'tarnetar_fair.jpg'
         ],
         'duration': [
             '10 days', '8 days', '2 days', '10 days', '3 days',
             '4 days', '48 days', '4 months', '5 days', '4 days',
             '3 days', '7 days', '2 days', '36 hours',
             '15 days', '11 days', '10 days', '5 days',
-            '3 days', '10 days'
+            '3 days', '10 days',
+            '10 days', '4 days', '3 days', '7 days', '3 days',
+            '15 days', '15 days', '5 days', '3 days', '9 days',
+            # New durations
+            '9 days', '5 days', '1 day', '36 hours', '5 days',
+            '3 days', '3 days', '3 days', '7 days', '4 days'
         ],
         'highlights': [
             'Tribal dances, Morungs (traditional huts), indigenous games, food festival',
@@ -236,12 +288,34 @@ def load_cultural_events():
             'Themed pandals, dhunuchi dance, sindoor khela, cultural performances, community feasts',
             'Ganga Aarti, Dev Deepawali, floating diyas, fireworks, cultural performances',
             'Processions, music and dance performances, puppet shows, craft exhibitions',
-            'Cultural performances, indigenous sports, fashion shows, boat races, polo matches'
+            'Cultural performances, indigenous sports, fashion shows, boat races, polo matches',
+            'Royal processions, torchlight parades, cultural dances, heritage exhibitions',
+            'Stick fights, traditional songs, folk dances, colorful attire',
+            'Women swing rides, fasting rituals, songs praising Goddess Parvati',
+            'Cattle trading, folk dances, turban tying, camel races',
+            'Traditional dances, bamboo music, local cuisines, village fairs',
+            'Temple processions, classical music, folk dances, fireworks',
+            'Handicraft displays, folk music performances, cultural workshops',
+            'Folk dance shows, culinary stalls, craft bazaars, cultural parades',
+            'Devotional songs, spiritual talks, classical dance recitals',
+            'Chariot pulling, devotional singing, massive crowds, religious fervor',
+            # New highlights
+            'Tribal rituals, folk dances, traditional music, local cuisine tastings',
+            'Rituals involving rat worship, traditional music, fairs and processions',
+            'Grand reenactment of divine wedding, traditional music, cultural dances',
+            'Elephant processions, percussion ensembles, fireworks display',
+            'Trade fairs, cultural performances, business seminars, handicraft exhibitions',
+            'Community feasts, bonfires, traditional games, folk songs',
+            'Folk dances, music performances, traditional food stalls',
+            'Traditional music, folk dances, cultural parades, food festivals',
+            'Folk dances, songs, rituals for marital happiness, fairs',
+            'Traditional wrestling, cultural shows, local crafts, folk music'
         ]
     }
     df = pd.DataFrame(data)
     df['date'] = pd.to_datetime(df['date'])
     return df
+
 
 @st.cache_data
 def load_tourism_trends():
