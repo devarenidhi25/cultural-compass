@@ -1,0 +1,336 @@
+/* Main Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+/* Header Styles */
+.header {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--highlight-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--highlight-color);
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card h4 {
+  color: var(--highlight-color);
+  margin-top: 0;
+}
+
+/* Badge Styles */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.badge-primary {
+  background-color: var(--highlight-color);
+  color: white;
+}
+
+.badge-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.badge-tertiary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.badge-light {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Featured Section */
+.featured-section {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.featured-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--highlight-color);
+}
+
+/* Calendar Styles */
+.google-calendar {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  background-color: var(--card-background);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--card-background);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.calendar-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.calendar-nav button {
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-day-header {
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--card-background);
+  color: var(--text-color);
+}
+
+.calendar-day {
+  min-height: 100px;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-background);
+}
+
+.calendar-day.different-month {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.calendar-day.today {
+  background-color: rgba(var(--highlight-color-rgb), 0.1);
+  border: 2px solid var(--highlight-color);
+}
+
+.day-number {
+  text-align: right;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.calendar-event {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  color: white;
+}
+
+.calendar-event.cultural {
+  background-color: #4caf50;
+}
+
+.calendar-event.religious {
+  background-color: #9c27b0;
+}
+
+.calendar-event.music {
+  background-color: #2196f3;
+}
+
+.calendar-event.harvest {
+  background-color: #ff9800;
+}
+
+.calendar-event.art {
+  background-color: #e91e63;
+}
+
+/* Timeline Styles */
+.timeline-container {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.timeline-month {
+  color: var(--highlight-color);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-line-container {
+  position: relative;
+  height: 100px;
+  margin: 20px 0;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--border-color);
+  transform: translateY(-50%);
+}
+
+.timeline-event {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.timeline-dot {
+  width: 15px;
+  height: 15px;
+  background-color: var(--highlight-color);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid var(--card-background);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-tooltip {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--card-background);
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: max-content;
+  max-width: 200px;
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.timeline-dot:hover + .timeline-tooltip {
+  opacity: 1;
+}
+
+/* Card Grid Styles */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.calendar-card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.calendar-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-date {
+  background-color: var(--highlight-color);
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.calendar-content {
+  padding: 1rem;
+}
+
+.calendar-content h4 {
+  margin-top: 0;
+  color: var(--highlight-color);
+}
+
+/* Dark mode specific overrides */
+.dark-mode {
+  --highlight-color-rgb: 187, 134, 252;
+}
+
+/* CSS Variables for colors */
+:root {
+  --highlight-color-rgb: 255, 153, 51;
+}
