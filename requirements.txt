@@ -1,0 +1,12 @@
+# Core Libraries
+streamlit
+pandas
+
+# Snowflake Connector (if using Snowflake for dynamic data)
+snowflake-connector-python
+
+# Optional – Add these if used in components/pages (common in dashboards)
+numpy
+plotly
+matplotlib
+seaborn
