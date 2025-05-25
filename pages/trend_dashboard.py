@@ -4,6 +4,7 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 
+
 def show_trend_dashboard(yearly_trends, monthly_trends, demographics, origin, purpose, spending):
     """Display the Trend Dashboard tab content"""
     st.markdown("<h2>Tourism Trends & Insights</h2>", unsafe_allow_html=True)
