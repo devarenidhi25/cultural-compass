@@ -18,7 +18,7 @@ from components.footer import show_footer
 
 # Utilities
 from utils.styles import load_css, toggle_dark_mode
-from utils.data_loader import load_all_data, get_heritage_sites_data
+from utils.data_loader import load_all_data, get_heritage_sites_data, load_enhanced_heritage_sites
 
 # Page config
 st.set_page_config(
@@ -33,6 +33,8 @@ load_css()
 
 # Load data (static + dynamic)
 data = load_all_data()
+# Load enhanced heritage CSV
+data["enhanced_heritage_sites"] = load_enhanced_heritage_sites()
 
 # Load heritage sites dynamically from Snowflake
 data["heritage_sites"] = get_heritage_sites_data()
@@ -111,8 +113,10 @@ elif page == "Trend Dashboard":
         data["demographics"],
         data["origin"],
         data["purpose"],
-        data["spending"]
+        data["spending"],
+        data["enhanced_heritage_sites"]  # ✅ Pass enhanced dataset
     )
+
 
 elif page == "Story Cards":
     show_story_cards(data["art_forms"])

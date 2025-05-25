@@ -318,6 +318,19 @@ def load_cultural_events():
 
 
 @st.cache_data
+def load_enhanced_heritage_sites():
+    df = pd.read_csv("enhanced_indian_heritage_sites.csv")
+    df.columns = df.columns.str.lower()
+    return df
+
+
+def load_all_data():
+    """Load all datasets and return them in a dictionary"""
+    return {
+        "enhanced_heritage_sites": load_enhanced_heritage_sites()
+    }
+
+@st.cache_data
 def load_tourism_trends():
     # Sample data for tourism trends
     states = [
